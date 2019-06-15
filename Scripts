@@ -2,7 +2,7 @@
 minikube start --extra-config=apiserver.authorization-mode=RBAC --extra-config=apiserver.enable-admission-plugins="PodSecurityPolicy"
 
 # Create policies
-kubectl create –f privileged.yaml && kubectl create –f privileged.yaml
+kubectl create –f privileged.yaml && kubectl create –f restricted.yaml
 
 # View policies
 kubectl get psp
